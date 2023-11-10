@@ -25,7 +25,9 @@ RUN mkdir /notebooks
 #RUN pip3 install -q --use-deprecated=legacy-resolver tflite-model-maker
 RUN apt -y install libportaudio2
 #RUN pip install --upgrade protobuf
-RUN pip install -q --use-deprecated=legacy-resolver tflite-model-maker
+#RUN pip uninstall numpy && install numpy==1.23
+RUN pip install -q numpy==1.23
+RUN pip install -q tflite-model-maker-nightly
 RUN pip install -q pycocotools
 RUN pip install -q opencv-python-headless==4.1.2.30
 #RUN pip uninstall -y tensorflow && pip install -q tensorflow==2.8.0
